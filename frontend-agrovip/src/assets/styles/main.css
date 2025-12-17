@@ -1,0 +1,165 @@
+/* * AGROVIP - Estilos Globais
+ * Arquivo: src/assets/styles/main.css
+ */
+
+/* =========================================
+   1. VARIÁVEIS DE DESIGN (STYLE GUIDE)
+   ========================================= */
+
+:root {
+    /* Cores */
+    --cor-primaria: #4CAF50;       /* Verde Agrovip Principal */
+    --cor-primaria-hover: #43a047; /* Tom mais escuro para hover */
+    --cor-secundaria: #E8F5E9;     /* Verde bem claro (fundos de alerta, etc) */
+    
+    --cor-fundo-app: #F7F9F7;       /* Fundo global (cinza-verde muito claro) */
+    --cor-fundo-card: #FFFFFF;     /* Fundo de elementos (cards, inputs) */
+    
+    --cor-texto-principal: #333333; /* Texto escuro (quase preto) */
+    --cor-texto-secundario: #666666; /* Texto para rótulos, placeholders */
+    --cor-texto-branco: #FFFFFF;     /* Texto sobre fundos verdes */
+
+    --cor-borda: #E0E0E0;          /* Bordas de inputs, divisórias */
+    --cor-erro: #D32F2F;           /* Para validação de formulários */
+
+    /* Tipografia */
+    --font-principal: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    /* Unidades de Layout */
+    --raio-borda: 8px;             /* Cantos arredondados (inputs, botões, cards) */
+    --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   2. RESET GLOBAL E ESTILOS BASE
+   ========================================= */
+
+/* Um reset moderno para garantir consistência */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* Define a base para unidades 'rem' */
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--cor-fundo-app);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-primaria-hover);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 0.75em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.25rem; } /* 36px */
+h2 { font-size: 1.75rem; } /* 28px */
+h3 { font-size: 1.25rem; } /* 20px */
+
+
+/* =========================================
+   3. CLASSES DE UTILITÁRIOS (FORMULÁRIOS)
+   ========================================= */
+
+/* * Classes que usaremos nos componentes de formulário.
+ * (Ex: <input class="form-input"> / <button class="btn btn-primary">)
+ */
+
+/* Inputs de Formulário */
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: var(--font-principal);
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px var(--cor-secundaria);
+}
+
+.form-input::placeholder {
+    color: var(--cor-texto-secundario);
+    opacity: 0.8;
+}
+
+/* Rótulos (Labels) */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--cor-texto-secundario);
+}
+
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--raio-borda);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Botão Primário (Verde) */
+.btn-primary {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-branco);
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+/* Botão Secundário (Apenas contorno) */
+.btn-secondary {
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Botão de Bloco (Ocupa 100% da largura) */
+.btn-block {
+    width: 100%;
+    display: block;
+}
