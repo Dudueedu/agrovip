@@ -1,0 +1,1 @@
+O objetivo principal da solução é informatizar os processos de gerenciamento de estoque e controle de caixa (vendas), que anteriormente eram realizados de forma manual ou pouco eficiente. O sistema visa proporcionar maior agilidade no atendimento ao cliente, segurança nos dados financeiros e precisão no controle de mercadorias.
